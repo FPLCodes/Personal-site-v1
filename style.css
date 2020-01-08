@@ -81,41 +81,78 @@ p {
     align-items: center;
     justify-content: space-around;
     justify-self: center;
+    display: grid;
 }
 
 .logos {
     transform: scale(2);
     margin: 130px 30px 0 30px;
     padding: 45px;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'linked git stacked'
+    '. sololearn .'
 }
 
 .logos a {
     color: black;
 }
 
+.linked {
+    grid-area: linked;
+    justify-self: end;
+    margin-right: 5px;
+}
+
 #linked:hover {
     transform: scale(1.1);
-    transition: 0.1s;
+    transition: 0.2s;
+}
+
+.git {
+    grid-area: git;
+    justify-self: center;
 }
 
 #git:hover {
     transform: scale(1.1);
-    transition: 0.1s;
+    transition: 0.2s;
+}
+
+.stacked {
+    grid-area: stacked;
+    justify-self: start;
+    margin-left: 5px;
 }
 
 #stacked:hover {
     transform: scale(1.1);
-    transition: 0.1s;
+    transition: 0.2s linear;
+}
+
+.sl {
+    grid-area: sololearn;
+    justify-self: center;
+    margin-top: 3px;
+}
+
+.sololearn {
+    border-radius: 50%;
+}
+
+.sololearn:hover {
+    transform: scale(1.15);
+    transition: 0.2s linear;
 }
 
 .down {
     transform: scale(2.5);
     margin: 250px 0 0 95px;
     cursor: pointer;
-    transition: 0.2s;
     position: relative;
     width: 10px;
+    transition: 0.2s;
 }
 
 .down a {
@@ -221,7 +258,7 @@ p {
     align-items: center;
     justify-self: center;
     transition: 0.2s;
-    margin-top: 180px;
+    margin-top: 200px;
     cursor: pointer;
 }
 
@@ -402,7 +439,7 @@ footer {
     grid-area: contact;
     align-self: center;
     font-family: 'Quicksand', sans-serif;
-    margin-left: 50px;
+    margin-left: 150px;
     color: white;
 }
 
@@ -425,4 +462,5 @@ footer {
     margin-left: 30px;
     transform: scale(1.2);
     color: white;
+    cursor: pointer;
 }
